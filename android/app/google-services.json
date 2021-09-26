@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "30285239986",
+    "project_id": "exitonly-fdb61",
+    "storage_bucket": "exitonly-fdb61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30285239986:android:1a44291d7d98831e37dbab",
+        "android_client_info": {
+          "package_name": "com.example.eoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30285239986-8k813vbpu0uihvtf8cplc3t0434kqh5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAvewVTkV0UuZxm-s8IQFHpbdmwPuXCZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30285239986-8k813vbpu0uihvtf8cplc3t0434kqh5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
