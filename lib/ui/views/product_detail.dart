@@ -164,6 +164,7 @@ class _ProductDetail extends State<ProductDetail>{
                                       widget.data['price'],widget.data['unit'],widget.data['availableDate'],
                                       widget.data['productImage']);
                                   productList.add(product);
+                                  productList.add(product);
                                   Get.to(() => ConfirmOrder(productList: productList));
                                   // Respond to button press
                                 },

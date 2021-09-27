@@ -16,11 +16,12 @@ class ConfirmOrder extends StatefulWidget {
 class _ConfirmOrderState extends State<ConfirmOrder> {
 
   num totalPrice = 0;
-  List itemCounters = <ItemCounter>[];
+  List<ItemCounter> itemCounters = <ItemCounter>[];
   @override
   void initState(){
     for (var i=0;i<widget.productList.length;i++){
-      itemCounters.add(ItemCounter(widget.productList[i].unit,widget.productList[i].price));
+      itemCounters.add(ItemCounter(
+          widget.productList[i].unit,widget.productList[i].price,widget.productList[i].productName));
     }
   }
 
@@ -178,7 +179,7 @@ class _ConfirmOrderState extends State<ConfirmOrder> {
                       Text('Total \$ ${totalPrice.toStringAsFixed(2)}',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20)),
                       SizedBox(width:MediaQuery.of(context).size.width*0.3),
                       ElevatedButton(
-                        onPressed: () {Get.to(() => MakePayment());},
+                        onPressed: () {Get.to(() => MakePayment(totalPrice: totalPrice,itemCounters: itemCounters,));},
                         child: Text('Checkout',style: TextStyle(fontSize: 12)),
                         style: ButtonStyle(
                             padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10)),
@@ -201,8 +202,9 @@ class _ConfirmOrderState extends State<ConfirmOrder> {
 }
 
 class ItemCounter {
+  String name;
   String unit;
   num price;
   num number=0;
-  ItemCounter(this.unit, [this.price = 0]);
+  ItemCounter(this.unit, [this.price = 0 ,this.name =""]);
 }
